@@ -2,4 +2,4 @@
 # Client configuration file
 Host *
 IdentityFile ~/.ssh/school
-PasswordAuthentication no
+PasswordAuthentication no 100-puppet_ssh_config.pp
