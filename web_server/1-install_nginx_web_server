@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script is used to install Nginx web server on a remote server using SSH.
+
+#update files
+sudo apt-get update -y
+#install Nginx web server
+sudo apt-get install nginx -y
+#create the default webpage
+sudo sh -c "echo 'server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    root /var/www/html;
+    index index.html;
+    server_name _;
+    location / {
+        return 200 \"Holberton School\";
+    }
+}' > /etc/nginx/sites-available/default"
+#start Nginx service
+service nginx start
