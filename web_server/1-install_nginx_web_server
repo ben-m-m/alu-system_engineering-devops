@@ -17,4 +17,4 @@ sudo sh -c "echo 'server {
     }
 }' > /etc/nginx/sites-available/default"
 #start Nginx service
-service nginx start
+sudo service nginx restart
