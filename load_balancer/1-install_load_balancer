@@ -9,7 +9,7 @@ server_config=\
 frontend balancer-frontend
         bind *:80
         mode http
-        default_backend benson-backend
+        default_backend balancer-backend
 
 backend balancer-backend
         balance roundrobin
