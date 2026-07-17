@@ -6,10 +6,10 @@ sudo apt-get install haproxy -y
 
 server_config=\
 "
-frontend balancer-frontend
+frontend balancer_http_in
         bind *:80
         mode http
-        default_backend balancer-backend
+        default_backend benson-backend
 
 backend balancer-backend
         balance roundrobin
